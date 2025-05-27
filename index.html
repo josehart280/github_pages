@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Psychology Insights</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="navbar-list">
+                <li><a href="nine.html">About</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Psychology Insights</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Psychology</h2>
+            <p>Psychology is the scientific study of the mind and behavior. It seeks to understand individuals and groups through various approaches and methodologies.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti id delectus similique aut ad adipisci consequatur. Optio, non ipsa tempora quos possimus commodi quam corporis delectus, ullam ea eligendi.</p>
+        </section>
+        
+        <section id="topics">
+            <h2>Topics in Psychology</h2>
+            <ul>
+                <li>Cognitive Psychology</li>
+                <li>Behavioral Psychology</li>
+                <li>Developmental Psychology</li>
+                <li>Clinical Psychology</li>
+                <li>Social Psychology</li>
+            </ul>
+        </section>
+        
+        <section id="resources">
+            <h2>Resources</h2>
+            <p>Explore articles, books, and tools to deepen your understanding of psychology and its applications in everyday life.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/brain.jpg" alt="Brain">
+                <img src="images/therapy.jpg" alt="Therapy">
+                <img src="images/group.jpg" alt="Group Discussion">
+                <img src="images/mindfulness.jpg" alt="Mindfulness">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more, feel free to reach out to us.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem dolorem cum accusamus est natus fuga tempora aperiam minus dicta veniam, et alias esse quia iure illum ut quae autem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cumque, autem, deleniti illo delectus natus possimus odio corrupti corporis at voluptatem eaque? Fugit voluptatibus natus vero saepe autem quam eum.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Psychology Insights. All rights reserved.</p>
+        
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar-list');
+            navbar.classList.toggle('show');
+        }
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const header = document.querySelector('header');
+            const headerBottom = header.getBoundingClientRect().bottom;
+
+            if (window.scrollY > headerBottom) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
